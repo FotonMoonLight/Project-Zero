@@ -6,6 +6,8 @@ public class PlayerControl : MonoBehaviour
 {
     public float _MovementSpeed;
     public Sprite[] sprites;
+
+    public GameObject stick;
     
     void Start()
     {
@@ -31,18 +33,22 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[0];
+            stick.GetComponent<SpriteRenderer>().sortingOrder = 4;
         }
         if (Input.GetKey(KeyCode.S))
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[1];
+            stick.GetComponent<SpriteRenderer>().sortingOrder = 6;
         }
         if (Input.GetKey(KeyCode.A))
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[2];
+            stick.GetComponent<SpriteRenderer>().sortingOrder = 6;
         }
         if (Input.GetKey(KeyCode.D))
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[3];
+            stick.GetComponent<SpriteRenderer>().sortingOrder = 6;
         }
     }
 }
