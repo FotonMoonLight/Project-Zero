@@ -6,14 +6,18 @@ public class BulletLogic : MonoBehaviour
 {
     public int damage;
     public int damageTime;
+    public int _LifeTime = 10;
+
+    private int _LifeCorutin = 1;
+
     public float speed;
+
     public GameObject point;
     public GameObject enemy;
+
     Rigidbody2D rb;
-    PlayerAttack pl;
     void Start()
     {
-        pl = GetComponent<PlayerAttack>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -22,6 +26,13 @@ public class BulletLogic : MonoBehaviour
     {
         Vector2 vel = new Vector2(point.transform.position.x - gameObject.transform.position.x, point.transform.position.y - gameObject.transform.position.y);
         rb.AddForce(vel.normalized * speed * Time.fixedDeltaTime,ForceMode2D.Impulse);
+
+        if(_LifeCorutin == 1)
+        {
+            _LifeCorutin = 0;
+            StartCoroutine(LifeTime());
+        }
+
         if(damageTime > 0)
         {
             enemy.GetComponent<Enemy>()._HpEnemy -= damage;
@@ -35,7 +46,12 @@ public class BulletLogic : MonoBehaviour
         {
             enemy = collision.gameObject;
             damageTime += 1;
-            
         }
+    }
+
+    IEnumerator LifeTime()
+    {
+        yield return new WaitForSeconds(_LifeTime);
+        Destroy(gameObject);
     }
 }
