@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    public int _PlayerHP = 20;
     public float _MovementSpeed;
     public Sprite[] sprites;
 
@@ -17,6 +18,7 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        PlayerHpControll();
         PlayerController();
         PlayerSpriteRenderer();
     }
@@ -27,28 +29,48 @@ public class PlayerControl : MonoBehaviour
         Vector3 velocity = new Vector3(Hor, Ver, 0);
         transform.position = transform.position + _MovementSpeed * velocity.normalized * Time.fixedDeltaTime;
     }
+    private void PlayerHpControll()
+    {
+        if (_PlayerHP <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
     private void PlayerSpriteRenderer()
     {
         
-        if (Input.GetKey(KeyCode.W))
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite = sprites[0];
-            stick.GetComponent<SpriteRenderer>().sortingOrder = 4;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite = sprites[1];
-            stick.GetComponent<SpriteRenderer>().sortingOrder = 6;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite = sprites[2];
-            stick.GetComponent<SpriteRenderer>().sortingOrder = 6;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite = sprites[3];
-            stick.GetComponent<SpriteRenderer>().sortingOrder = 6;
-        }
+            if(Input.GetKey(KeyCode.W))
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = sprites[0];
+                stick.GetComponent<SpriteRenderer>().sortingOrder = 4;
+            }
+        
+        
+        
+            if (Input.GetKey(KeyCode.S))
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = sprites[1];
+                stick.GetComponent<SpriteRenderer>().sortingOrder = 6;
+            }
+        
+        
+          
+            if (Input.GetKey(KeyCode.A))
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = sprites[2];
+                stick.GetComponent<SpriteRenderer>().sortingOrder = 4;
+            }
+        
+        
+        
+            if (Input.GetKey(KeyCode.D))
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = sprites[3];
+                stick.GetComponent<SpriteRenderer>().sortingOrder = 6;
+            }
+        
+        
+        
     }
+   
 }

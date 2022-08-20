@@ -97,7 +97,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -133,7 +133,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &2396923548152862265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,5 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _HpEnemy: 10
+  _Damage: 2
+  _HasAttack: 1
   _EnemySpeed: 1
-  player: {fileID: 8784925036772039781, guid: 70ac96f6bde7ca645a94890c8b79510e, type: 3}
+  player: {fileID: 0}
