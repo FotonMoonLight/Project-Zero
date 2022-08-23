@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour
     public int _PlayerHP = 20;
     public float _MovementSpeed;
     public Sprite[] sprites;
+    public bool _IsImposible = false;
     private bool _HasControll = true;
 
     public GameObject stick;
@@ -19,7 +20,11 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        PlayerHpControll();
+        if(_IsImposible == false)
+        {
+            PlayerHpControll();
+        } 
+        
         
         
             PlayerController();

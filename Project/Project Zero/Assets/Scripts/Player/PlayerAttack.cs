@@ -24,6 +24,7 @@ public class PlayerAttack : MonoBehaviour
     }
     private void PlayerAt()
     {
+        //Отвечает за поворот объекта в сторону мыши
         var dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - player.transform.position;
         transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
     }

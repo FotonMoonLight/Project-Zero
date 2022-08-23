@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   damageTime: 0
-  _LifeTime: 10
+  _LifeTime: 2
   speed: 5
   point: {fileID: 930967591884250514}
   enemy: {fileID: 0}
