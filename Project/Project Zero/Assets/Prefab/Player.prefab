@@ -44,7 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d2e3ea8ef556e4bb5302c13b370f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2396923548152862266, guid: 7ab680a6dbdb82149ab86f21e7b56cdb, type: 3}
+  enemy:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _SpawnCoolDown: 3
 --- !u!1 &4570935203676224825
 GameObject:
@@ -90,7 +93,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d2e3ea8ef556e4bb5302c13b370f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2396923548152862266, guid: 7ab680a6dbdb82149ab86f21e7b56cdb, type: 3}
+  enemy:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _SpawnCoolDown: 3
 --- !u!1 &4570935204192788618
 GameObject:
@@ -136,7 +142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d2e3ea8ef556e4bb5302c13b370f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2396923548152862266, guid: 7ab680a6dbdb82149ab86f21e7b56cdb, type: 3}
+  enemy:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _SpawnCoolDown: 3
 --- !u!1 &4570935204217192900
 GameObject:
@@ -182,7 +191,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d2e3ea8ef556e4bb5302c13b370f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2396923548152862266, guid: 7ab680a6dbdb82149ab86f21e7b56cdb, type: 3}
+  enemy:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _SpawnCoolDown: 3
 --- !u!1 &4570935204277163327
 GameObject:
@@ -259,7 +271,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d2e3ea8ef556e4bb5302c13b370f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2396923548152862266, guid: 7ab680a6dbdb82149ab86f21e7b56cdb, type: 3}
+  enemy:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _SpawnCoolDown: 3
 --- !u!1 &4570935204456658232
 GameObject:
@@ -271,6 +286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4570935204456658215}
   - component: {fileID: 4570935204456658214}
+  - component: {fileID: 2062181822412775355}
   - component: {fileID: 4570935204456658233}
   - component: {fileID: 4570935204456658212}
   - component: {fileID: 4570935204456658213}
@@ -350,6 +366,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2062181822412775355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4570935204456658232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0b48dd8c3c0af4cbf84f041f8b2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 0}
+  _HpPlayer: {fileID: 0}
 --- !u!114 &4570935204456658233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +399,7 @@ MonoBehaviour:
   - {fileID: 990300338, guid: cec5f061c685ff84f969be8c71452822, type: 3}
   - {fileID: -1748331779, guid: cec5f061c685ff84f969be8c71452822, type: 3}
   - {fileID: -1185726290, guid: cec5f061c685ff84f969be8c71452822, type: 3}
+  _IsImposible: 0
   stick: {fileID: 4570935204699153373}
 --- !u!50 &4570935204456658212
 Rigidbody2D:
@@ -461,7 +492,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d2e3ea8ef556e4bb5302c13b370f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2396923548152862266, guid: 7ab680a6dbdb82149ab86f21e7b56cdb, type: 3}
+  enemy:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _SpawnCoolDown: 3
 --- !u!1 &4570935204638391984
 GameObject:
@@ -507,7 +541,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d2e3ea8ef556e4bb5302c13b370f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2396923548152862266, guid: 7ab680a6dbdb82149ab86f21e7b56cdb, type: 3}
+  enemy:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _SpawnCoolDown: 3
 --- !u!1 &4570935204699153373
 GameObject:
@@ -693,7 +730,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d2e3ea8ef556e4bb5302c13b370f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2396923548152862266, guid: 7ab680a6dbdb82149ab86f21e7b56cdb, type: 3}
+  enemy:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _SpawnCoolDown: 3
 --- !u!1 &4570935205148196307
 GameObject:
