@@ -5,10 +5,17 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     public int _PlayerHP = 20;
+    public int _PlayerMana = 20;
+    public int _ManaRegen;
+
     public float _MovementSpeed;
+    public float _ManaRegenTime;
+
     public Sprite[] sprites;
+
     public bool _IsImposible = false;
     private bool _HasControll = true;
+    private bool _ManaRegenStart = true;
 
     public GameObject stick;
     public GameObject buttonOne;
@@ -24,7 +31,7 @@ public class PlayerControl : MonoBehaviour
     {
         if(_IsImposible == false)
         {
-            PlayerHpControll();
+            PlayerStatControll();
         } 
         
         
@@ -88,7 +95,7 @@ public class PlayerControl : MonoBehaviour
         }
 
     }
-    private void PlayerHpControll()
+    private void PlayerStatControll()
     {
         if (_PlayerHP <= 0)
         {
@@ -97,6 +104,17 @@ public class PlayerControl : MonoBehaviour
             buttonTwo.SetActive(true);
 
         }
+        if (_PlayerMana < 20 & _ManaRegenStart == true)
+        {
+            StartCoroutine(ManaRegen());
+            _ManaRegenStart = false;
+        }
+    }
+    IEnumerator ManaRegen()
+    {
+        yield return new WaitForSeconds(_ManaRegenTime);
+        _PlayerMana += _ManaRegen;
+        _ManaRegenStart = true;
     }
     private void PlayerSpriteRenderer()
     {

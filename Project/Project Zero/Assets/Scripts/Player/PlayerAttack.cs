@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    Rigidbody2D rb;
+    private int _Mana;
     public GameObject player;
     public GameObject bullet;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+   
     }
 
     
     void FixedUpdate()
     {
+        _Mana = player.GetComponent<PlayerControl>()._PlayerMana;
         PlayerAt();
     }
     private void Update()
@@ -30,9 +31,10 @@ public class PlayerAttack : MonoBehaviour
     }
     private void Bullet()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1) & _Mana > 0)
         {
             Instantiate(bullet, gameObject.transform.position,gameObject.transform.rotation);
+            player.GetComponent<PlayerControl>()._PlayerMana -= 2;
         }
     }
 }
