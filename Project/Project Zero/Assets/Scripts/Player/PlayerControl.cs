@@ -11,7 +11,9 @@ public class PlayerControl : MonoBehaviour
     private bool _HasControll = true;
 
     public GameObject stick;
-    
+    public GameObject buttonOne;
+    public GameObject buttonTwo;
+
     void Start()
     {
         
@@ -91,6 +93,9 @@ public class PlayerControl : MonoBehaviour
         if (_PlayerHP <= 0)
         {
             Destroy(gameObject);
+            buttonOne.SetActive(true);
+            buttonTwo.SetActive(true);
+
         }
     }
     private void PlayerSpriteRenderer()

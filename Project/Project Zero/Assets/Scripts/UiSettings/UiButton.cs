@@ -19,7 +19,7 @@ public class UiButton : MonoBehaviour
     }
    public void StartButton()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("ClassSelect");
     }
     public void SettingButton()
     {
@@ -36,4 +36,5 @@ public class UiButton : MonoBehaviour
     {
         Application.Quit();
     }
+    
 }
