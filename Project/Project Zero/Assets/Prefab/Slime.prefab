@@ -152,3 +152,4 @@ MonoBehaviour:
   _ReloadHelper: 1
   _EnemySpeed: 2
   player: {fileID: 0}
+  crystal: {fileID: 335216043032242728, guid: 004c780e7399bd64f9c0cc3d5ce25c8b, type: 3}

@@ -7,19 +7,30 @@ public class HpBar : MonoBehaviour
 {
     public Slider _Hpslider;
     public Slider _ManaSlider;
+    public Slider _OzSlider;
     public PlayerControl _HpPlayer;
 
     private void Start()
     {
         SetMaxHP(_HpPlayer._PlayerHP);
         SetMaxMana(_HpPlayer._PlayerMana);
+        SetMaxOz(_HpPlayer._PlayerOz);
     }
     private void Update()
     {
         SetHP(_HpPlayer._PlayerHP);
         SetMp(_HpPlayer._PlayerMana);
+        SetOz(_HpPlayer._PlayerOz);
     }
-
+    public void SetOz(int Oz)
+    {
+        _OzSlider.value = Oz;
+    }
+    public void SetMaxOz(int Oz)
+    {
+        _OzSlider.maxValue = 100;
+        _OzSlider.value = Oz;
+    }
     public void SetMaxMana(int Mp)
     {
         _ManaSlider.maxValue = Mp;

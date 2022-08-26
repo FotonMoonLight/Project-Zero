@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     public float _EnemySpeed;
 
     public GameObject player;
+    public GameObject crystal;
     void Start()
     {
         
@@ -26,6 +27,7 @@ public class Enemy : MonoBehaviour
         transform.position = transform.position + _EnemySpeed * velocity.normalized * Time.fixedDeltaTime;
         if(_HpEnemy <= 0)
         {
+            Instantiate(crystal,transform.position,transform.rotation);
             Destroy(gameObject);
         }
         if(_HasAttack == true)

@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour
     public int _PlayerHP = 20;
     public int _PlayerMana = 20;
     public int _ManaRegen;
+    public int _PlayerOz = 0;
 
     public float _MovementSpeed;
     public float _ManaRegenTime;
@@ -152,5 +153,13 @@ public class PlayerControl : MonoBehaviour
         
         
     }
-   
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Oz"))
+        {
+            _PlayerOz += 1;
+            Destroy(collision.gameObject);
+        }
+    }
+
 }
