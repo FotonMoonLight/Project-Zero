@@ -439,7 +439,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: '<color=white>A ranged mage class focusing on ranged combat. Feature of
-    the class: high damage, long range attack, area damage.</color>'
+    the class: high damage, long range attack.</color>'
 --- !u!222 &590594336
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -644,8 +644,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 48.284973, y: -46.674988}
-  m_SizeDelta: {x: 96.57, y: 93.34}
+  m_AnchoredPosition: {x: 65.274994, y: -51.050003}
+  m_SizeDelta: {x: 130.55, y: 136.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600087408
 MonoBehaviour:
@@ -723,8 +723,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d8a0a54091fd3d8469606fc5e7836590, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: dd3e69649e9ac2e49acc65691704089e, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
