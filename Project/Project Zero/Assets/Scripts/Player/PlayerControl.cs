@@ -100,7 +100,7 @@ public class PlayerControl : MonoBehaviour
     {
         if (_PlayerHP <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             buttonOne.SetActive(true);
             buttonTwo.SetActive(true);
 
@@ -153,13 +153,6 @@ public class PlayerControl : MonoBehaviour
         
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Oz"))
-        {
-            _PlayerOz += 1;
-            Destroy(collision.gameObject);
-        }
-    }
+    
 
 }

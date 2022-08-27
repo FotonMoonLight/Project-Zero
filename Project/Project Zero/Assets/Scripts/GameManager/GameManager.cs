@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    
+    public static int _FrameRate = 60;
     void Start()
     {
-        Application.targetFrameRate = 60;
+        
     }
 
     
     void Update()
     {
-        
+            Application.targetFrameRate = _FrameRate;
     }
 }
