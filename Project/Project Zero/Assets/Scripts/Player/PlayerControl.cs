@@ -33,16 +33,9 @@ public class PlayerControl : MonoBehaviour
         if(_IsImposible == false)
         {
             PlayerStatControll();
-        } 
-        
-        
-        
+        }
             PlayerController();
-        
-        
             PlayerMove();
-        
-       
         PlayerSpriteRenderer();
     }
     private void PlayerController()
@@ -125,33 +118,21 @@ public class PlayerControl : MonoBehaviour
                 gameObject.GetComponent<SpriteRenderer>().sprite = sprites[0];
                 stick.GetComponent<SpriteRenderer>().sortingOrder = 4;
             }
-        
-        
-        
             if (Input.GetKey(KeyCode.S))
             {
                 gameObject.GetComponent<SpriteRenderer>().sprite = sprites[1];
                 stick.GetComponent<SpriteRenderer>().sortingOrder = 6;
             }
-        
-        
-          
             if (Input.GetKey(KeyCode.A))
             {
                 gameObject.GetComponent<SpriteRenderer>().sprite = sprites[2];
                 stick.GetComponent<SpriteRenderer>().sortingOrder = 4;
             }
-        
-        
-        
             if (Input.GetKey(KeyCode.D))
             {
                 gameObject.GetComponent<SpriteRenderer>().sprite = sprites[3];
                 stick.GetComponent<SpriteRenderer>().sortingOrder = 6;
             }
-        
-        
-        
     }
     
 
