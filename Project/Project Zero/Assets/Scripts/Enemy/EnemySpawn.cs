@@ -14,7 +14,7 @@ public class EnemySpawn : MonoBehaviour
     private bool _HasSpawn = true;
     void Update()
     {
-        if(_HasSpawn == true)
+        if(_HasSpawn == true & UpgradeLogic._Pause == false)
         {
             _EnemySpawnNum = Random.Range(0, enemy.Length);
             Instantiate(enemy[_EnemySpawnNum], transform.position, transform.rotation);

@@ -22,19 +22,21 @@ public class Enemy : MonoBehaviour
     
     void FixedUpdate()
     {
-        player = GameObject.Find("Player");
-        Vector3 velocity = (player.transform.position - transform.position);
-        transform.position = transform.position + _EnemySpeed * velocity.normalized * Time.fixedDeltaTime;
-        if(_HpEnemy <= 0)
+        if(UpgradeLogic._Pause == false)
         {
-            Instantiate(crystal,transform.position,transform.rotation);
-            Destroy(gameObject);
+            player = GameObject.Find("Player");
+            Vector3 velocity = (player.transform.position - transform.position);
+            transform.position = transform.position + _EnemySpeed * velocity.normalized * Time.fixedDeltaTime;
+            if (_HpEnemy <= 0)
+            {
+                Instantiate(crystal, transform.position, transform.rotation);
+                Destroy(gameObject);
+            }
+            if (_HasAttack == true)
+            {
+                StartCoroutine(Reload());
+            }
         }
-        if(_HasAttack == true)
-        {
-            StartCoroutine(Reload());
-        }
-        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -27,7 +27,6 @@ public class PlayerControl : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if(_IsImposible == false)
@@ -40,7 +39,7 @@ public class PlayerControl : MonoBehaviour
     }
     private void PlayerController()
     {
-        if(_HasControll == true)
+        if(_HasControll == true & UpgradeLogic._Pause == false)
         {
             float Hor = Input.GetAxis("Horizontal");
             float Ver = Input.GetAxis("Vertical");
