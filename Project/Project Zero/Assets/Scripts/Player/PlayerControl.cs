@@ -21,6 +21,7 @@ public class PlayerControl : MonoBehaviour
     public GameObject stick;
     public GameObject buttonOne;
     public GameObject buttonTwo;
+    public GameObject chest;
 
     void Start()
     {
@@ -101,6 +102,11 @@ public class PlayerControl : MonoBehaviour
         {
             StartCoroutine(ManaRegen());
             _ManaRegenStart = false;
+        }
+        if (_PlayerOz == 3)
+        {
+            chest.SetActive(true);
+            UpgradeLogic._Pause = true;
         }
     }
     IEnumerator ManaRegen()
