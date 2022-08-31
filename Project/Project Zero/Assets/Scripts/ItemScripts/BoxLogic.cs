@@ -19,9 +19,10 @@ public class BoxLogic : MonoBehaviour
         {
             gameObject.SetActive(true);
         }
-        if(_NumTap== 0)
+        if(_NumTap == 0)
         {
-
+           
+            
         }
     }
     public void OnChest()
