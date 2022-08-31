@@ -16,7 +16,7 @@ public class LogicForPause : MonoBehaviour
     {
         UpgradeLogic._Pause = false;
         mn.SetActive(false);
-
+        Time.timeScale = 1;
     }
     public void MenuButton()
     {

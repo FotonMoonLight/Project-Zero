@@ -12,6 +12,7 @@ public class UpgradeLogic : MonoBehaviour
     {
         _ps.SetActive(false);
         _Pause = !_Pause;
+        Time.timeScale = 0;
         if(UpgradeLogic._Pause == true)
         {
             menu.SetActive(true);

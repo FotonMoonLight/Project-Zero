@@ -6,11 +6,12 @@ public class BoxLogic : MonoBehaviour
 {
     private int _NumTap = 3;
     public GameObject player;
+    [Header ("Массив предметов")]
+    public GameObject[] items;
     private void Start()
     {
         
     }
-
 
     private void Update()
     {
