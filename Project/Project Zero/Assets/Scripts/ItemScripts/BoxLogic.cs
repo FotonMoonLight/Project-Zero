@@ -11,7 +11,6 @@ public class BoxLogic : MonoBehaviour
     [Header("Массив предметов")]
     public int[] index;
     public GameObject[] cells;
-    public Image[] cell;
     private void Start()
     {
         

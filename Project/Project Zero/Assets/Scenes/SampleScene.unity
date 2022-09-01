@@ -62577,7 +62577,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 276, y: -63.962784}
+  m_AnchoredPosition: {x: 509.72, y: -46}
   m_SizeDelta: {x: 119.431, y: 65.9256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &833187614
@@ -63614,7 +63614,7 @@ MonoBehaviour:
   _NumTap: 3
   player: {fileID: 166122798}
   box: {fileID: 1393076473}
-  index: 010000000100000001000000
+  index: 01000000
   cells:
   - {fileID: 1167876524}
   - {fileID: 1085798882}
@@ -63622,7 +63622,6 @@ MonoBehaviour:
   - {fileID: 279733347}
   - {fileID: 1306074870}
   - {fileID: 1020729097}
-  cell: []
 --- !u!1 &1496369235
 GameObject:
   m_ObjectHideFlags: 0
@@ -63660,7 +63659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -275.43768, y: -63.962784}
+  m_AnchoredPosition: {x: -558.76, y: -46}
   m_SizeDelta: {x: 134.6623, y: 65.9256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1496369237

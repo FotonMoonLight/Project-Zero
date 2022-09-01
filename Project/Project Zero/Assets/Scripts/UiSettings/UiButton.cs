@@ -10,19 +10,10 @@ public class UiButton : MonoBehaviour
     public InputField _MaxFrameRate;
     public GameObject[] firtsSee;
     public GameObject[] setting;
-    void Start()
-    {
-      
-    }
-
     
-    void Update()
-    {
-
-    }
    public void StartButton()
     {
-        SceneManager.LoadScene("ClassSelect");
+        SceneManager.LoadScene("LevelSelecter");
     }
     public void SettingButton()
     {
@@ -46,6 +37,5 @@ public class UiButton : MonoBehaviour
         GameManager._FrameRate = x;
 
     }
-    
     
 }

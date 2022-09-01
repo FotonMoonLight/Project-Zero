@@ -14,7 +14,10 @@ public class ItemStat : MonoBehaviour
 
     public void Update()
     {
-        HpRegen();
+        if(UpgradeLogic._Pause == false)
+        {
+            HpRegen();
+        }
     }
     private void HpRegen()
     {

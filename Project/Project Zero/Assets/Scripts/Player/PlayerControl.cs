@@ -98,7 +98,7 @@ public class PlayerControl : MonoBehaviour
             buttonTwo.SetActive(true);
 
         }
-        if (_PlayerMana < 20 & _ManaRegenStart == true)
+        if (_PlayerMana < 20 & _ManaRegenStart == true & UpgradeLogic._Pause == false)
         {
             StartCoroutine(ManaRegen());
             _ManaRegenStart = false;

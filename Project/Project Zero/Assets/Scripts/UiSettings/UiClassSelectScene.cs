@@ -8,7 +8,7 @@ public class UiClassSelectScene : MonoBehaviour
     public static int _ClassId;
     public void ReturnButton()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("LevelSelecter");
     }
     public void ClassSelectZero()
     {
