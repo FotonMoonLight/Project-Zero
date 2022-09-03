@@ -25,12 +25,14 @@ public class BoxLogic : MonoBehaviour
         if(_NumTap == 0)
         {
             RangeItem();
+            SortItem();
             UpgradeLogic._Pause = false;
             Time.timeScale = 1;
             gameObject.SetActive(false);
             player.GetComponent<PlayerControl>()._PlayerOz = 0;
             _NumTap = 3;
         }
+        
     }
     public void OnChest()
     {
@@ -47,6 +49,32 @@ public class BoxLogic : MonoBehaviour
             }
             else 
             {
+                
+            }
+        }
+    }
+    private void SortItem()
+    {
+        int maxNum = cells[0].GetComponent<ItemStat>().IndexItem;
+       for(int i = 0; i < cells.Length; i++)
+        {
+            if(cells[i].GetComponent<ItemStat>().IndexItem > maxNum)
+            {
+                maxNum = cells[i].GetComponent<ItemStat>().IndexItem;
+            }
+        }
+       for(int i = 0; i < cells.Length; i++)
+        {
+            for (int j = i + 1; j < cells.Length; j++)
+            {
+                if((cells[i].GetComponent<ItemStat>().IndexItem != 0) & (cells[j].GetComponent<ItemStat>().IndexItem != 0))
+                {
+                    if (cells[i].GetComponent<ItemStat>().IndexItem == cells[j].GetComponent<ItemStat>().IndexItem)
+                    {
+                        maxNum++;
+                        cells[j].GetComponent<ItemStat>().IndexItem = maxNum;
+                    }
+                }
                 
             }
         }
