@@ -103,10 +103,12 @@ public class PlayerControl : MonoBehaviour
             StartCoroutine(ManaRegen());
             _ManaRegenStart = false;
         }
-        if (_PlayerOz == 3)
+        if (_PlayerOz == HpBar.maxOz)
         {
             chest.SetActive(true);
             UpgradeLogic._Pause = true;
+            HpBar.LevelUp = true;
+            _PlayerOz = 0;
         }
     }
     IEnumerator ManaRegen()

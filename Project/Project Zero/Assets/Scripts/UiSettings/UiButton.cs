@@ -37,5 +37,9 @@ public class UiButton : MonoBehaviour
         GameManager._FrameRate = x;
 
     }
+    public void Return()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     
 }

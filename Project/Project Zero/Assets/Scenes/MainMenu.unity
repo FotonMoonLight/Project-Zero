@@ -1070,9 +1070,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1206192570}
-        m_TargetAssemblyTypeName: UiClassSelectScene, Assembly-CSharp
-        m_MethodName: ReturnButton
+      - m_Target: {fileID: 1020289226}
+        m_TargetAssemblyTypeName: UiButton, Assembly-CSharp
+        m_MethodName: Return
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
