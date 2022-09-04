@@ -16,6 +16,7 @@ public class ItemStat : MonoBehaviour
     public static bool _GiveMp = true;
     private bool MpRegenMax = true;
     private bool _HasRegen = true;
+    private bool _GiveSpeed = true;
     private bool _TextureChange = true;
 
     public void Update()
@@ -26,6 +27,7 @@ public class ItemStat : MonoBehaviour
             MpRegen();
             MaxHp();
             MaxMp();
+            MaxSpeed();
         }
         if(IndexItem > 0 & _TextureChange == true)
         {
@@ -70,6 +72,14 @@ public class ItemStat : MonoBehaviour
         {
             player.GetComponent<PlayerControl>()._ManaRegenTime -= 0.5f;
             MpRegenMax = false;
+        }
+    }
+    private void MaxSpeed()
+    {
+        if(IndexItem == 5 & _GiveSpeed == true)
+        {
+            player.GetComponent<PlayerControl>()._MovementSpeed += 0.5f;
+            _GiveSpeed = false;
         }
     }
     IEnumerator regenTimer()
